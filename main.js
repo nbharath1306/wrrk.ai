@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const typewriterEl = document.getElementById('hero-typewriter');
     const words = ['Autonomous', 'Intelligent', 'AI-Native', 'Scalable', 'Unstoppable'];
     let wordIdx = 0;
-    let charIdx = 0;
-    let isDeleting = false;
+    let charIdx = words[0].length; // start full — matches pre-filled HTML
+    let isDeleting = true;         // start by deleting so it cycles naturally
     const TYPING_SPEED = 90;
     const DELETING_SPEED = 50;
-    const PAUSE_AFTER = 2000;
+    const PAUSE_AFTER = 2200;
     const PAUSE_BEFORE = 400;
 
     function typeLoop() {
